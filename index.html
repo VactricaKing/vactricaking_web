@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VactricaKing</title>
+    <style>
+        body {
+            /* Centrar todo en la pantalla */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111; /* Fondo oscuro */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .rainbow-text {
+            font-size: 10vw; /* El tamaño se ajusta a la pantalla */
+            font-weight: bold;
+            text-align: center;
+            
+            /* El truco del arcoíris */
+            background: linear-gradient(
+                45deg, 
+                #ff0000, 
+                #ff7300, 
+                #fffb00, 
+                #48ff00, 
+                #00ffd5, 
+                #002bff, 
+                #7a00ff, 
+                #ff00c8, 
+                #ff0000
+            );
+            background-size: 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            
+            /* Animación */
+            animation: move-rainbow 5s linear infinite;
+        }
+
+        @keyframes move-rainbow {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 400%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rainbow-text">
+        vactricaking.com
+    </div>
+
+</body>
+</html>
